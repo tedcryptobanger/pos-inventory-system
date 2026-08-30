@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NovaPOS business management and point-of-sale system">
+  <meta name="theme-color" content="#111827">
+  <title>NovaPOS — Business Management</title>
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <div class="brand">
+        <div class="brand-mark">N</div>
+        <div><strong>NovaPOS</strong><span>Business Management</span></div>
+      </div>
+      <nav id="main-nav">
+        <p class="nav-label">Main</p>
+        <button class="nav-item active" data-view="dashboard">⌂<span>Dashboard</span></button>
+        <button class="nav-item" data-view="pos">🛒<span>Point of Sale</span></button>
+        <button class="nav-item" data-view="products">📦<span>Products</span></button>
+        <button class="nav-item" data-view="inventory">📊<span>Inventory</span></button>
+        <button class="nav-item" data-view="sales">🧾<span>Sales History</span></button>
+        <p class="nav-label">Management</p>
+        <button class="nav-item" data-view="customers">👥<span>Customers</span></button>
+        <button class="nav-item" data-view="suppliers">🚚<span>Suppliers</span></button>
+        <button class="nav-item" data-view="purchases">🧾<span>Purchases</span></button>
+        <button class="nav-item" data-view="expenses">💳<span>Expenses</span></button>
+        <p class="nav-label">Analytics</p>
+        <button class="nav-item" data-view="reports">📈<span>Reports</span></button>
+        <button class="nav-item" data-view="activity">🧭<span>Activity Log</span></button>
+        <button class="nav-item" data-view="settings">⚙️<span>Settings</span></button>
+      </nav>
+    </aside>
+
+    <div class="main-shell">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-btn mobile-only" id="menu-btn" aria-label="Open navigation">☰</button>
+          <div>
+            <h1 id="page-title">Dashboard</h1>
+            <p id="page-subtitle">Overview of your business</p>
+          </div>
+        </div>
+        <div class="topbar-right">
+          <button class="icon-btn" id="notification-btn" aria-label="Notifications">🔔</button>
+          <div class="user-chip"><div class="avatar">AD</div><div class="user-text"><strong>Admin User</strong><span>Administrator</span></div></div>
+        </div>
+      </header>
+      <main id="view-root" class="content" tabindex="-1"></main>
+    </div>
+  </div>
+  <div id="modal-root"></div>
+  <div id="toast-root" aria-live="polite" aria-atomic="true"></div>
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>
